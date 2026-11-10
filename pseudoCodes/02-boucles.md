@@ -38,8 +38,9 @@ INIT
     n = 5
 
 DEBUT FUNCTION compterJusqua( n )
+    resultat = ""
     POUR i = 1, TANT QUE i < n, FAIRE i++
-        resultat += i + ", "
+        resultat += string(i) + ", "
     FIN POUR
     resultat += n
     AFFICHER resultat
