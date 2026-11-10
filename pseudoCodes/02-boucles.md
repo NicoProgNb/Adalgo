@@ -4,6 +4,7 @@
 ```text
 VARIABLES
 n : number
+i : number
 compter : number[]
 element : number
 resultat : string
@@ -31,8 +32,8 @@ FIN
 ## Exo 1 simplifié
 ```text
 VARIABLES
-n : number
-resultat : string
+    n : number
+    resultat : string
 
 INIT
     n = 5
@@ -50,12 +51,28 @@ FIN
 ## Exo 2
 ```text
 VARIABLES
-
+    n : number
+    i : number
+    resultat : string
 
 INIT
+    LIRE n
 
-DEBUT FUNCTION (  )
+DEBUT FUNCTION afficherPairs( n )
+    resultat = ""
 
+    SI n = 0 ALORS
+            resultat = "0"
+    SINON
+        POUR i = 2 TANT QUE i <= n FAIRE i +2
+            SI résultat != "" ALORS
+                resultat += ", "
+            FIN SI
+            resultat += i
+        FIN POUR
+    FIN SI
+
+    AFFICHER resultat
 FIN
 ```
 

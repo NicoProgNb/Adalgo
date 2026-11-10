@@ -45,7 +45,20 @@ export const compterJusqua = (n) => {
  * @example afficherPairs(8) → affiche 2, 4, 6, 8
  */
 export const afficherPairs = (n) => {
-  // à compléter
+  
+  let resultat = ""
+
+  if(n === 0) {
+       resultat = "0"
+  } else {
+    for (let i = 2; i <= n; i += 2) {
+      if (resultat !== "") {
+        resultat += ", "
+      }
+      resultat += i
+    } 
+  }
+  console.log(resultat)
 }
 
 /**
