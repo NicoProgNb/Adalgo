@@ -8,7 +8,34 @@
  * @example compterJusqua(5) → affiche 1, 2, 3, 4, 5
  */
 export const compterJusqua = (n) => {
-  // à compléter
+  // ======= 
+  // 1ER JET
+  // =======
+  // let compter = []
+  // let resultat = ""
+
+  // for (let i = 1; i <= n; i++) {
+  //   compter.push(i)
+  // }
+
+  // compter.forEach(element => {
+  //   if (element === compter.length) {
+  //     resultat += element
+  //   } else {
+  //     resultat += `${element}, `
+  //   }
+  // })
+  // console.log(resultat)
+
+  // =========
+  // Simplifié
+  // =========
+  let resultat = ""
+  for (let i = 1; i < n; i++) {
+    resultat += `${i}, `    
+  }
+  resultat += n
+  console.log(resultat)
 }
 
 /**
