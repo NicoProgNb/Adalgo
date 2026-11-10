@@ -9,7 +9,10 @@
  * @example estPositif(5) → true / estPositif(-3) → false
  */
 export const estPositif = (n) => {
-  // à compléter
+  if (n >= 0) {
+    return true
+  }
+  return false
 }
 
 /**
@@ -18,8 +21,12 @@ export const estPositif = (n) => {
  * @returns {boolean}
  * @example estPair(4) → true / estPair(7) → false
  */
+
 export const estPair = (n) => {
-  // à compléter
+  if (n %2 === 0) {
+    return true
+  }
+  return false
 }
 
 /**
@@ -30,7 +37,13 @@ export const estPair = (n) => {
  * @example max(3, 7) → 7
  */
 export const max = (a, b) => {
-  // à compléter
+  if(a > b) {
+    return a
+  } else if (b > a) {
+    return b
+  } else {
+    return a
+  }
 }
 
 /**
@@ -42,7 +55,19 @@ export const max = (a, b) => {
  * @example mention(17) → "Très bien"
  */
 export const mention = (note) => {
-  // à compléter
+  if(note < 10) {
+    return "Insuffisant"
+  } else if (note <= 12) {
+    return "Passable"
+  } else if (note <= 14) {
+    return "Assez bien"
+  } else if (note <= 16) {
+    return "Bien"
+  } else if (note <= 20) {
+    return "Très bien"
+  } else {
+    return "Note non valable"
+  }
 }
 
 /**
