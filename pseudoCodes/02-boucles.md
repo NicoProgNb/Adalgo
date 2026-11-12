@@ -79,39 +79,108 @@ FIN
 ## Exo 3
 ```text
 VARIABLES
-
+    n : number
+    i : number
+    result : number
 
 INIT
+    LIRE n
 
+DEBUT FUNCTION somme( n )
+    result = 0
 
-DEBUT FUNCTION  ()
+    POUR i = 0 TANT QUE i <= n FAIRE i++
+        result += i
+    FIN POUR
 
+    AFFICHER '${result}`
+    RETURN result
+
+FIN
+```
+## Exo 4
+```text
+VARIABLES
+    n : number
+    i : number
+    result : number
+
+INIT
+    LIRE n
+
+DEBUT FUNCTION produit( n )
+    result = 0
+
+    SI n = 0 ALORS
+        result = 1
+    SINON
+        POUR i = 1 TANT QUE i <= n FAIRE i++
+            result *= i
+        FIN POUR
+    FIN SI
+
+    AFFICHER '${result}`
+    RETURN result
 FIN
 ```
 
 ## Exo 5
 ```text
 VARIABLES
+    n : number
+    i : number
+    result : number
 
 INIT
+    LIRE n
 
-DEBUT FUNCTION ()
+DEBUT FUNCTION compterPair( n )
+    result = 0
+
+    POUR i = 2 TANT QUE i <= n FAIRE i+2
+        result++
+    FIN POUR
+
+    AFFICHER '${result}`
+    RETURN result
+
 FIN
 ```
 ## Exo 6
 ```text
 VARIABLES
+    n : number
+    result : number[]
 
 INIT
+    result = []
+    Lire n
 
-DEBUT FUNCTION ()
+DEBUT FUNCTION number( n )
+    POUR i = 1 TANT QUE i <= n FAIRE i++
+        ajouter à result[n*i]
+    AFFICHER '${result}`
+    RETURN result
 FIN
+```
 
-## Exo 4
+## Exo 7
 ```text
 VARIABLES
+    n : number
+    limite : number
+    result : number[]
 
 INIT
+    result = []
+    i = 1
+    Lire n
 
-DEBUT FUNCTION ()
+DEBUT FUNCTION multiplesJusqua( n, limite )
+    TANT QUE n * i <= limite
+        ajouter à result[n*i]
+        i++
+    AFFICHER '${result}`
+    RETURN result
 FIN
+```
