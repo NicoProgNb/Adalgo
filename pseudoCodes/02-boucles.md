@@ -1,4 +1,4 @@
-# 01-Conditions
+# 02-Boucles
 
 ## Exo 1
 ```text

@@ -9,7 +9,14 @@
  * @example maximum([3, 7, 2, 9, 1]) → 9
  */
 export const maximum = (tableau) => {
-  // à compléter
+  let max = -999
+  tableau.forEach((element) => {
+    if (element > max) {
+      max = element
+    }
+  })
+  console.log(max)
+  return max
 }
 
 /**
@@ -19,7 +26,14 @@ export const maximum = (tableau) => {
  * @example minimum([3, 7, 2, 9, 1]) → 1
  */
 export const minimum = (tableau) => {
-  // à compléter
+  let min = 999
+  tableau.forEach((element) => {
+    if (element < min) {
+      min = element
+    }
+  })
+  console.log(min)
+  return min
 }
 
 /**
@@ -29,7 +43,18 @@ export const minimum = (tableau) => {
  * @example moyenne([2, 4, 6]) → 4 / moyenne([]) → null
  */
 export const moyenne = (tableau) => {
-  // à compléter
+  let somme = 0
+
+  if(tableau.length === 0) {
+    return null
+  } 
+  tableau.forEach((element) => {
+    somme += element
+  })
+  let resultat = somme / tableau.length
+
+  console.log(resultat)
+  return resultat
 }
 
 /**
