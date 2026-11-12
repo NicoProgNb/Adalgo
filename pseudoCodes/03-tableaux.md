@@ -72,26 +72,44 @@ FIN
 ## Exo 4
 ```text
 VARIABLES
-    tableau : number[]
-
+    contient : number[]
+    valeur : number
 
 INIT
-
+    LIRE contient
+    LIRE valeur
 
 DEBUT FUNCTION contient( tableau, valeur )
-
+    POUR i = 0 TANT QUE i < tableau.length FAIRE i++ 
+        SI tableau[i] = valeur ALORS 
+            AFFICHER vrai
+            RETURN vrai
+        FIN SI
+    FIN POUR
+    AFFICHER faux
+    RETURN faux
 FIN
 ```
 ## Exo 5
 ```text
 VARIABLES
     tableau : number[]
+    valeur : number
+    compteur : number
 
 
 INIT
-
+    LIRE contient
+    LIRE valeur
+    compteur = 0
 
 DEBUT FUNCTION compter( tableau, valeur )
-
+    POUR CHAQUE tableau.element
+        SI valeur = tableau.element ALORS
+            compteur ++
+        FIN SI
+    FIN POUR
+    AFFICHER compteur
+    RETURN compteur
 FIN
 ```
