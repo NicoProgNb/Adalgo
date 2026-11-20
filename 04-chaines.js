@@ -9,7 +9,15 @@
  * @example inverserChaine("bonjour") → "ruojnob"
  */
 export const inverserChaine = (chaine) => {
-  // à compléter
+  if(chaine === "") {
+    return chaine
+
+  } else if(typeof chaine !== "string") {
+    return "Entrée non correcte"
+
+  } else {
+    return chaine.split("").reverse("").join("")
+  }
 }
 
 /**
@@ -19,7 +27,16 @@ export const inverserChaine = (chaine) => {
  * @example estPalindrome("kayak") → true / estPalindrome("bonjour") → false
  */
 export const estPalindrome = (chaine) => {
-  // à compléter
+  if(chaine === "") {
+    return chaine
+
+  } else if(typeof chaine !== "string") {
+    return "Entrée non correcte"
+
+  } else {
+      const inverse = chaine.split("").reverse("").join("")
+        return chaine === inverse
+  }
 }
 
 /**
@@ -29,7 +46,17 @@ export const estPalindrome = (chaine) => {
  * @example compterVoyelles("bonjour") → 3
  */
 export const compterVoyelles = (chaine) => {
-  // à compléter
+
+  if(typeof chaine !== "string") {
+    return "Entrée non correcte"
+
+  } else {
+    const voyelles = "aeiouy"
+    const lettreChaine = chaine.toLowerCase().split("")
+    const voyellesChaine = lettreChaine.filter((lettre) => voyelles.includes(lettre))
+
+    return voyellesChaine.length
+  }
 }
 
 /**

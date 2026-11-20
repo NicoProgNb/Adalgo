@@ -6,17 +6,53 @@ import { inverserChaine, estPalindrome, compterVoyelles, capitaliser, tronquer, 
 
 // Cas à couvrir : chaîne normale, chaîne vide.
 describe("inverserChaine", () => {
-  it.todo("à compléter")
+
+  it("Inverse la chaine de caractère", () => {
+    expect(inverserChaine("chaine")).toBe("eniahc")
+  })
+
+  it("retourne '' si pas de caractère", () => {
+    expect(inverserChaine("")).toBe("")
+  })
+
+  it("retourne 'Entrée non correcte' si != string", () => {
+    expect(inverserChaine(12)).toBe("Entrée non correcte")
+  })
+
 })
 
 // Cas à couvrir : palindrome, non-palindrome, un seul caractère.
 describe("estPalindrome", () => {
-  it.todo("à compléter")
+
+  it("chaine === inverse", () => {
+    expect(estPalindrome("kayak")).toBe(true)
+  })
+
+    it("chaine !== inverse", () => {
+    expect(estPalindrome("kaya")).toBe(false)
+  })
+
+  it("retourne '' si pas de caractère", () => {
+    expect(estPalindrome("")).toBe("")
+  })
+
+  it("retourne 'Entrée non correcte' si != string", () => {
+    expect(estPalindrome(12)).toBe("Entrée non correcte")
+  })
+
 })
 
 // Cas à couvrir : chaîne avec voyelles, chaîne sans voyelle.
 describe("compterVoyelles", () => {
-  it.todo("à compléter")
+
+  it("Retourne la qte de voyelle", () => {
+    expect(compterVoyelles("test")).toBe(1)
+  })
+
+  it("retourne 'Entrée non correcte' si != string", () => {
+    expect(compterVoyelles(12)).toBe("Entrée non correcte")
+  })
+
 })
 
 // [FACULTATIF] Cas à couvrir : chaîne mixte (boNJOUR → Bonjour), chaîne déjà correcte.
